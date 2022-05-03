@@ -7,7 +7,7 @@ internal static class Extensions
             throw new ArgumentNullException(nameof(reader));
         }
         if (millisecondsTimeout <= -1) {
-            throw new ArgumentOutOfRangeException($"{nameof(millisecondsTimeout)} must be greater than -1");
+            throw new ArgumentOutOfRangeException($"{nameof(millisecondsTimeout)} must be equal or greater than -1");
         }
 
         Task<int> readTask = reader.ReadAsync(buffer, index, count);
